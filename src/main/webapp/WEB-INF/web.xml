@@ -12,7 +12,10 @@
  </servlet>  
  <servlet-mapping>  
   <servlet-name>springresume</servlet-name>  
-  <url-pattern>/*</url-pattern>  
- </servlet-mapping>        
+  <url-pattern>/restful/*</url-pattern>  
+ </servlet-mapping>   
+ <listener>
+ 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>     
 </web-app>
 
