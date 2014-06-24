@@ -12,7 +12,7 @@
  </servlet>  
  <servlet-mapping>  
   <servlet-name>springresume</servlet-name>  
-  <url-pattern>/Resume/*</url-pattern>  
+  <url-pattern>/*</url-pattern>  
  </servlet-mapping>        
 </web-app>
 
