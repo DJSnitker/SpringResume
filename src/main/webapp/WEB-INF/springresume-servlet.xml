@@ -8,7 +8,8 @@
   http://www.springframework.org/schema/context  
   http://www.springframework.org/schema/context/spring-context-3.0.xsd">  
   
- <context:component-scan base-package="com.codeslinger.resume" />  
+ <context:component-scan base-package="com.codeslinger.resume" /> 
+  
  <!-- we're not serving jsp in this app, so no view resolver is necessary 
  <bean id="viewResolver"  
   class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
