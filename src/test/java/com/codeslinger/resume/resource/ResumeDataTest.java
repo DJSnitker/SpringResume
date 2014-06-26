@@ -37,7 +37,7 @@ public class ResumeDataTest{
 
     @Test
     public void testEmail(){   	
-    	Assert.assertTrue("email is the same", myResumeData.getDataValue("Email").equalsIgnoreCase("dougsnitker@gmail.com"));
+    	Assert.assertTrue("email is the same", myResumeData.getDataValue("Email+Address").equalsIgnoreCase("dougsnitker@gmail.com"));
     }
 
     @Test
@@ -73,5 +73,10 @@ public class ResumeDataTest{
     @Test
     public void testSource(){ 	
     	Assert.assertTrue("source url is the same", myResumeData.getDataValue("Source").equalsIgnoreCase("url"));
-	}    	
+	}   
+
+	@Test
+    public void testStatus(){ 	
+    	Assert.assertTrue("Status is the same", myResumeData.getDataValue("Status").equalsIgnoreCase("yes"));
+	}  	
 }
