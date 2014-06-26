@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 import com.codeslinger.resume.command.CommandInterface;
+import com.codeslinger.resume.command.Command;
 
 @Service
 public class CommandFactory implements CommandFactoryInterface, ApplicationContextAware {
@@ -17,7 +18,15 @@ public class CommandFactory implements CommandFactoryInterface, ApplicationConte
   	}
 	
 	public CommandInterface getCommand(String commandLookup){
-		return (CommandInterface)applicationContext.getBean(commandLookup);
+		CommandInterface retrievedCommand;
+		try{
+			retrievedCommand = (CommandInterface)applicationContext.getBean(commandLookup);		
+		}
+		catch(Exception e){
+			//return the default command as this catch means there is no named bean
+			retrievedCommand = new Command();
+		}
+		return retrievedCommand;
 	}
 
 }

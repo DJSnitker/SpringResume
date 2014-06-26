@@ -26,8 +26,13 @@ public class CommandFactoryTest{
     }
 
     @Test
-    public void testDefaultCommandReturns(){
+    public void testPingCommandReturns(){
     	Assert.assertNotNull("Verify Command Object is created by default", testCommandFactory.getCommand("Ping"));
+    }
+
+    @Test
+    public void testDefaultCommandReturns(){
+        Assert.assertNotNull("Verify Command Object is created by default", testCommandFactory.getCommand(""));
     }
 
 }
