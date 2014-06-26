@@ -1,8 +1,6 @@
 package com.codeslinger.resume.resource;
 
 import java.io.File;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.Attribute;
@@ -26,20 +24,18 @@ public class ResumeData{
 		buildSetFromNodes();
 	}
 
-	private void buildNodeList( ClassPathResource pathToXMLFile )
-	{
+	private void buildNodeList( ClassPathResource pathToXMLFile ){
 		try{
 			SAXBuilder builder = new SAXBuilder();
 			Document document = (Document) builder.build(pathToXMLFile.getFile());
-			Element rootNode = document.getRootElement();
-			nodes = rootNode.getChildren("data");
+			nodes = document.getRootElement().getChildren("data");
 		}
 		catch(Exception e){ /*do nothing, XML document failed to process */ }
 	}
 
 	private void buildSetFromNodes(){
-		for(int i = 0; nodes != null && i < nodes.size();i++) {
-			Element el = (Element)nodes.get(i);
+		for(Object node : nodes ) {
+			Element el = (Element)node;
 			Attribute nameAttribute = (Attribute)el.getAttribute("name");
 			Attribute valueAttribute = (Attribute)el.getAttribute("value");
 			requestResponse.put(nameAttribute.getValue(),valueAttribute.getValue());

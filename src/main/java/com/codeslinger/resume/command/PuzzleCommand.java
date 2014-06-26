@@ -1,21 +1,25 @@
 package com.codeslinger.resume.command;
 
 import com.codeslinger.resume.command.CommandInterface;
-import com.codeslinger.resume.resource.ResumeData;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
-public class KeyValueCommand implements CommandInterface{
-	@Autowired
-	private ResumeData resumeData;
+public class PuzzleCommand implements CommandInterface{
 
-	public ResumeData getResumeData(){
-		return resumeData;
+	private int height;
+	private int width;
+
+	public int getHeight(){
+		return height;
+	}
+
+	public int getWidth(){
+		return width;
 	}
 
 	public String execute( String command, String dynamicData ){
-		return resumeData.getDataValue( command );
+		return "OK";
 	}
 
 }
