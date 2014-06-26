@@ -15,6 +15,10 @@ public class KeyValueCommand implements CommandInterface{
 	}
 
 	public String execute( String command, String dynamicData ){
+		if(resumeData == null )
+		{
+			System.out.println("null xml data");
+		}
 		return resumeData.getDataValue( command );
 	}
 

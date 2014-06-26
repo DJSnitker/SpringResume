@@ -39,7 +39,7 @@ public class CommandFactoryTest{
     public void testDefaultCommandReturnsKeyValueCommand(){
         CommandInterface myCommand = testCommandFactory.getCommand("");
         Assert.assertNotNull("Verify Command Object is created by default", myCommand);
-        Assert.assertTrue("Ping returns a Command Type", KeyValueCommand.class.getName().equalsIgnoreCase(myCommand.getClass().getName()));
+        Assert.assertTrue("<empty> returns a KeyValueCommand Type", KeyValueCommand.class.getName().equalsIgnoreCase(myCommand.getClass().getName()));
     }
 
 }
