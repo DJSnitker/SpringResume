@@ -21,6 +21,7 @@ public class ResumeController {
 	@ResponseBody
     public String interpretRequest(@RequestParam(value="q", required=false, defaultValue="Ping") String command,
     							   @RequestParam(value="d", required=false, defaultValue="") String dynamicData) {
+    	System.out.println("Executing: " + command);
         return commandFactory.getCommand(command).execute(command,dynamicData);
     }
 }

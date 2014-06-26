@@ -34,7 +34,7 @@ public class KeyValueCommandTest{
 
     @Test
     public void testExecutingEmailCommand(){
-        String commandResult = myCommand.execute("Email+Address","SPAM - the other not so meat, meat product");
+        String commandResult = myCommand.execute("Email Address","SPAM - the other not so meat, meat product");
         Assert.assertEquals("Emails Match", "dougsnitker@gmail.com", commandResult);
     }
 

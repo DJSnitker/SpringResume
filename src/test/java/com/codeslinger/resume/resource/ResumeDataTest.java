@@ -37,7 +37,7 @@ public class ResumeDataTest{
 
     @Test
     public void testEmail(){   	
-    	Assert.assertTrue("email is the same", myResumeData.getDataValue("Email+Address").equalsIgnoreCase("dougsnitker@gmail.com"));
+    	Assert.assertTrue("email is the same", myResumeData.getDataValue("Email Address").equalsIgnoreCase("dougsnitker@gmail.com"));
     }
 
     @Test
