@@ -27,7 +27,7 @@ public class CommandTest{
 
     @Test
     public void testCommandResponse(){
-        Assert.assertTrue("Default Command returns 'OK'", myCommand.execute("random data").equalsIgnoreCase("OK"));
+        Assert.assertTrue("Default Command returns 'OK'", myCommand.execute("Ping","random data").equalsIgnoreCase("OK"));
     }
 
 }
