@@ -1,6 +1,6 @@
-package com.codeslinger.resume;
+package com.codeslinger.resume.command;
 
-import com.codeslinger.resume.CommandInterface;
+import com.codeslinger.resume.command.CommandInterface;
 
 public class Command implements CommandInterface{
 

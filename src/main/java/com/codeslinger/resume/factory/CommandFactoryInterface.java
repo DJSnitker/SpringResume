@@ -1,4 +1,6 @@
-package com.codeslinger.resume;
+package com.codeslinger.resume.factory;
+
+import com.codeslinger.resume.command.Command;
 
 public interface CommandFactoryInterface{
 

@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.codeslinger.resume.factory.CommandFactoryInterface;
+
 @Controller
 @RequestMapping("/resume")
 public class ResumeController {

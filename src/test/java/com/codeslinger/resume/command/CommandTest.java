@@ -1,4 +1,4 @@
-package com.codeslinger.resume;
+package com.codeslinger.resume.command;
 
 import org.junit.Assert;
 
@@ -9,7 +9,7 @@ import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import com.codeslinger.resume.Command;
+import com.codeslinger.resume.command.Command;
 
 public class CommandTest{
 

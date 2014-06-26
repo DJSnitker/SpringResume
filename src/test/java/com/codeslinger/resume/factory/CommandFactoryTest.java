@@ -1,4 +1,4 @@
-package com.codeslinger.resume;
+package com.codeslinger.resume.factory;
 
 import org.junit.Assert;
 
@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.codeslinger.resume.CommandFactory;
+import com.codeslinger.resume.factory.CommandFactory;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:test-context.xml"})

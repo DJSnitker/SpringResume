@@ -1,4 +1,4 @@
-package com.codeslinger.resume;
+package com.codeslinger.resume.command;
 
 public interface CommandInterface{
 
