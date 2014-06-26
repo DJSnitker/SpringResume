@@ -1,9 +1,9 @@
 package com.codeslinger.resume.factory;
 
-import com.codeslinger.resume.command.Command;
+import com.codeslinger.resume.command.CommandInterface;
 
 public interface CommandFactoryInterface{
 
-	public Command getCommand(String commandLookup);
+	public CommandInterface getCommand(String commandLookup);
 	
 }

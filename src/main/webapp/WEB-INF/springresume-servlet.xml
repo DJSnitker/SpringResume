@@ -8,5 +8,6 @@
   http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
   http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.0.xsd"> 
   	<mvc:annotation-driven/>
- 	<context:component-scan base-package="com.codeslinger.resume" /> 	
+ 	<context:component-scan base-package="com.codeslinger.resume" />
+ 	<bean id="Ping" class="com.codeslinger.resume.command.Command" autowire="byName"></bean>	
 </beans> 

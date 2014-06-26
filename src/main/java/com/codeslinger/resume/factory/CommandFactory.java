@@ -1,18 +1,23 @@
 package com.codeslinger.resume.factory;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.stereotype.Service;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
-import com.codeslinger.resume.command.Command;
+import com.codeslinger.resume.command.CommandInterface;
 
 @Service
-public class CommandFactory implements CommandFactoryInterface {
+public class CommandFactory implements CommandFactoryInterface, ApplicationContextAware {
+ 
+ 	private ApplicationContext applicationContext;
 
-	public Command getCommand(String commandLookup){
-		return new Command();
+ 	@Override
+  	public void setApplicationContext(ApplicationContext applicationContext) {
+    	this.applicationContext = applicationContext;
+  	}
+	
+	public CommandInterface getCommand(String commandLookup){
+		return (CommandInterface)applicationContext.getBean(commandLookup);
 	}
 
 }
