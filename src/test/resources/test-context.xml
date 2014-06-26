@@ -10,5 +10,11 @@
  	<context:component-scan base-package="com.codeslinger.resume" />
 
  	<bean id="Ping" class="com.codeslinger.resume.command.Command" autowire="byName"></bean>
- 	
+
+	<bean id="resumeDataResource" class="org.springframework.core.io.ClassPathResource">
+	    <constructor-arg value="resumeData.xml" />
+	</bean>
+ 	<bean id="ResumeData" class="com.codeslinger.resume.resource.ResumeData" autowire="byType">
+ 		<constructor-arg ref="resumeDataResource" />
+ 	</bean>	
 </beans> 

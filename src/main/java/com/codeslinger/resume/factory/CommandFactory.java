@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 import com.codeslinger.resume.command.CommandInterface;
-import com.codeslinger.resume.command.Command;
+import com.codeslinger.resume.command.KeyValueCommand;
 
 @Service
 public class CommandFactory implements CommandFactoryInterface, ApplicationContextAware {
@@ -24,7 +24,7 @@ public class CommandFactory implements CommandFactoryInterface, ApplicationConte
 		}
 		catch(Exception e){
 			//return the default command as this catch means there is no named bean
-			retrievedCommand = new Command();
+			retrievedCommand = new KeyValueCommand();
 		}
 		return retrievedCommand;
 	}
