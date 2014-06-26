@@ -31,14 +31,14 @@ public class CommandFactoryTest{
     @Test
     public void testPingCommandReturnsCommand(){
         CommandInterface myCommand = testCommandFactory.getCommand("Ping");
-    	Assert.assertNotNull("Verify Command Object is created by default", myCommand );
+    	Assert.assertNotNull("Verify Command Object is created by with spring override", myCommand );
         Assert.assertTrue("Ping returns a Command Type", Command.class.getName().equalsIgnoreCase(myCommand.getClass().getName()));
     }
 
     @Test
     public void testDefaultCommandReturnsKeyValueCommand(){
         CommandInterface myCommand = testCommandFactory.getCommand("");
-        Assert.assertNotNull("Verify Command Object is created by default", myCommand);
+        Assert.assertNotNull("Verify Key Value Command Object is created by default", myCommand);
         Assert.assertTrue("<empty> returns a KeyValueCommand Type", KeyValueCommand.class.getName().equalsIgnoreCase(myCommand.getClass().getName()));
     }
 
