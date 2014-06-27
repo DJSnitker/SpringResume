@@ -14,9 +14,8 @@ public class PositionalEvaluator{
 
 	public PositionalEvaluator( String CharacterValue, int columns ){
 		charValue = CharacterValue;		
-		if( maxComparisonUpdates == 0 ){
-			maxComparisonUpdates = (columns * columns);
-		}
+		maxComparisonUpdates = (columns * columns);
+		comparisonUpdateCount = 0;
 		lessThanMe = new HashMap<String, PositionalEvaluator>();
 		moreThanMe = new HashMap<String, PositionalEvaluator>();
 		equalToMe = new HashMap<String, PositionalEvaluator>();
