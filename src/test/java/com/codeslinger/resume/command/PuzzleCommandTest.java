@@ -32,7 +32,7 @@ public class PuzzleCommandTest{
 
 	@Test
 	public void testBuildingSizeSetting(){
-		String result = puzzler.execute("Puzzle","Please solve this puzzle: ABCD A-->- B---< C---> D---=");
+		String result = puzzler.execute("Puzzle","Please solve this puzzle:\n ABCD\nA-->-\nB---<\nC--->\nD---=");
 		Assert.assertTrue("Failed to calculate properly", " ABCD\nA=>>>\nB<=<<\nC<>=>\nD<><=".equals(result));
 		
 	}
