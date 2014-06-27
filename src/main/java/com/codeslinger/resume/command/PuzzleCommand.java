@@ -12,6 +12,7 @@ public class PuzzleCommand implements CommandInterface{
 	private String[] rows;
 
 	public String execute( String command, String dynamicData ){
+		dynamicData = dynamicData.substring(26,dynamicData.length());
 		rows = dynamicData.split(" ");
 		comparisonAggregate = buildAggregate();
 		analyzeComparisonTable();
@@ -41,7 +42,6 @@ public class PuzzleCommand implements CommandInterface{
 				if( comparisonSign.equals("=") || vertical == horizontal ){
 					comparisonAggregate.get( verticalKey ).equalize( comparisonAggregate.get( horizontalKey ) ); 
 				}
-
 			}
 		}
 	}
