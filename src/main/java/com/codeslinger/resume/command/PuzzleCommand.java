@@ -12,6 +12,7 @@ public class PuzzleCommand implements CommandInterface{
 	private String[] rows;
 
 	public String execute( String command, String dynamicData ){
+		System.out.println(dynamicData);
 		dynamicData = dynamicData.substring(26,dynamicData.length());
 		rows = dynamicData.split(" ");
 		comparisonAggregate = buildAggregate();
