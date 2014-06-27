@@ -10,6 +10,7 @@
   	<mvc:annotation-driven/>
  	<context:component-scan base-package="com.codeslinger.resume" />
  	<bean id="Ping" class="com.codeslinger.resume.command.Command" autowire="byName"></bean>
+ 	<bean id="Puzzle" class="com.codeslinger.resume.command.PuzzleCommand" autowire="byName"></bean>
  	<bean id="resumeDataResource" class="org.springframework.core.io.ClassPathResource">
 	    <constructor-arg value="resumeData.xml" />
 	</bean>
