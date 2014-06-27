@@ -26,7 +26,14 @@ public class PuzzleCommandTest{
 	}
 
 	@Test
-	public void testBuildingArray(){
-		Assert.assertTrue( puzzler.getHeight() == puzzler.getWidth() );
+	public void testBuildingPuzzler(){
+		Assert.assertNotNull( "Construction Failed", puzzler );
+	}
+
+	@Test
+	public void testBuildingSizeSetting(){
+		String result = puzzler.execute("Puzzle","ABCD A-->- B---< C---> D---=");
+		Assert.assertTrue("Failed to calculate properly", " ABCD\nA=>>>\nB<=<<\nC<>=>\nD<><=".equals(result));
+		
 	}
 }
