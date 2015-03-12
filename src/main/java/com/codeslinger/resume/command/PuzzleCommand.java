@@ -19,7 +19,7 @@ public class PuzzleCommand implements CommandInterface{
 		return buildResponse();
 	}
 
-	public HashMap<String,PositionalEvaluator> buildAggregate(){
+	private HashMap<String,PositionalEvaluator> buildAggregate(){
     	HashMap<String,PositionalEvaluator> comparisonAggregate = new HashMap<String,PositionalEvaluator>();
 		for(int i = 0; i < rows[0].length(); i++){	
 			comparisonAggregate.put( rows[0].substring(i,i+1), new PositionalEvaluator( rows[0].substring(i,i+1), rows.length - 1 ) );
@@ -27,7 +27,7 @@ public class PuzzleCommand implements CommandInterface{
 		return comparisonAggregate;
 	}
 
-	public void analyzeComparisonTable(){
+	private void analyzeComparisonTable(){
 		for(int vertical = 1; vertical < rows.length; vertical++){
 			String verticalKey = rows[0].substring(vertical-1, vertical);
 			for(int horizontal = 1; horizontal < rows[vertical].length(); horizontal++){
@@ -46,7 +46,7 @@ public class PuzzleCommand implements CommandInterface{
 		}
 	}
 
-	public String buildResponse(){
+	private String buildResponse(){
 		String result = " " + rows[0] + "\n";
 		for(int vertical = 0; vertical < rows[0].length(); vertical++){
 			String currentRowTitle = rows[0].substring(vertical, vertical + 1);
